@@ -244,7 +244,7 @@ int playScratchOffs(cash)
 			{
 				// 1
 			case ONE:
-				if (cash >= type)
+				if (cash >= ONE)
 				{
 					cash -= type;
 					oneSO = createScratchOffOne(oneSO);
@@ -637,7 +637,7 @@ FiveDollar createScratchOffFive(FiveDollar fiveSO)
 
 	const char SYMBOLS[8] = { '$', '%', '&', '#', '@', '!', '^', '*' };
 	int usedSyms[8] = { 0, 0, 0, 0, 0, 0, 0, 0 };
-	int usedNums[4] = { 0, 0 };
+	int usedNums[4] = { 0, 0, 0, 0 };
 
 	int num;
 	int used = 0;
@@ -691,6 +691,8 @@ FiveDollar createScratchOffFive(FiveDollar fiveSO)
 			}
 
 			used = 1;
+
+			break;
 		}
 
 	}
